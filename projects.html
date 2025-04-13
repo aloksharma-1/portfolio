@@ -8,13 +8,70 @@
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <link rel="icon" href="images/logo.jpeg" type="image/x-icon">
     <style>
-        /* Add this CSS for consistent image size */
+        /* Standardizing the project image size */
         .project-image {
             width: 100%;
-            height: auto;  /* Maintain aspect ratio */
-            max-width: 400px;  /* Set max width to make images consistent */
-            object-fit: cover;  /* Ensure image covers the container */
-            margin: 0 auto;  /* Center the image */
+            height: 200px; /* Fixed height for uniformity */
+            object-fit: cover;  /* Ensures the image covers the container without stretching */
+            border-radius: 8px;  /* Optional: Adds rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional: Adds subtle shadow */
+            margin-bottom: 20px;  /* Space below images */
+        }
+
+        /* Standardizing article layout */
+        .posts article {
+            margin-bottom: 40px; /* Space between articles */
+            padding: 20px;
+            border: 1px solid #eaeaea; /* Light border */
+            border-radius: 8px; /* Rounded corners for articles */
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        /* Hover effect for articles */
+        .posts article:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Button Styling */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Title styling */
+        h2 a {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        h2 a:hover {
+            color: #007bff;
+        }
+
+        /* Footer */
+        footer#footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .project-image {
+                height: 150px;  /* Adjust height for smaller screens */
+            }
         }
     </style>
 </head>
