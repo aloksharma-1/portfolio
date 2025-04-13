@@ -32,23 +32,24 @@
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
         }
 
-        /* Previous Button Styling */
+        /* Button Styling (Matching portfolio background color) */
         .button {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #007bff; /* Blue color */
-            color: #fff;
+            background-color: #f8f9fa; /* Light gray background (same as portfolio) */
+            color: #333;
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
-            border: 2px solid #007bff; /* Border matching the button color */
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border: 2px solid #eaeaea; /* Light border matching the background */
             font-size: 1rem;
             font-weight: 600;
         }
 
         .button:hover {
-            background-color: #0056b3; /* Darker blue when hovered */
-            border-color: #0056b3; /* Border color changes to match the background */
+            background-color: #eaeaea; /* Darker shade on hover */
+            color: #007bff; /* Change text color to blue on hover */
+            border-color: #007bff; /* Blue border on hover */
         }
 
         /* Title styling */
