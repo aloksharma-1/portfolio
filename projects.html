@@ -8,51 +8,46 @@
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <link rel="icon" href="images/logo.jpeg" type="image/x-icon">
     <style>
-        /* Standardizing the project image size */
         .project-image {
             width: 100%;
-            height: 200px; /* Fixed height for uniformity */
-            object-fit: cover;  /* Ensures the image covers the container without stretching */
-            border-radius: 8px;  /* Optional: Adds rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional: Adds subtle shadow */
-            margin-bottom: 20px;  /* Space below images */
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
 
-        /* Standardizing article layout */
         .posts article {
-            margin-bottom: 40px; /* Space between articles */
+            margin-bottom: 40px;
             padding: 20px;
-            border: 1px solid #eaeaea; /* Light border */
-            border-radius: 8px; /* Rounded corners for articles */
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
             transition: box-shadow 0.3s ease-in-out;
         }
 
-        /* Hover effect for articles */
         .posts article:hover {
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
         }
 
-        /* Button Styling (Matching portfolio background color) */
         .button {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #f8f9fa; /* Light gray background (same as portfolio) */
+            background-color: #f8f9fa;
             color: #333;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease, color 0.3s ease;
-            border: 2px solid #eaeaea; /* Light border matching the background */
+            border: 2px solid #eaeaea;
             font-size: 1rem;
             font-weight: 600;
         }
 
         .button:hover {
-            background-color: #eaeaea; /* Darker shade on hover */
-            color: #007bff; /* Change text color to blue on hover */
-            border-color: #007bff; /* Blue border on hover */
+            background-color: #eaeaea;
+            color: #007bff;
+            border-color: #007bff;
         }
 
-        /* Title styling */
         h2 a {
             font-size: 1.5rem;
             font-weight: 600;
@@ -65,24 +60,21 @@
             color: #007bff;
         }
 
-        /* Footer */
         footer#footer {
             background-color: #f8f9fa;
             padding: 20px;
             text-align: center;
         }
 
-        /* Responsive adjustments */
         @media (max-width: 768px) {
             .project-image {
-                height: 150px;  /* Adjust height for smaller screens */
+                height: 150px;
             }
         }
     </style>
 </head>
 <body class="is-preload">
 
-    <!-- Wrapper -->
     <div id="wrapper">
 
         <!-- Header -->
@@ -106,95 +98,81 @@
 
         <!-- Main -->
         <div id="main">
-
-            <!-- Projects -->
             <section class="posts">
 
-          <!-- Inside your <section class="posts"> section -->
-<!-- Fire N Grill -->
-<article>
-    <header>
-        <h2><a>Fire N Grill – Restaurant App</a></h2>
-    </header>
-    <a class="image fit"><img src="images/firengrill.png" alt="Fire N Grill App" class="project-image" /></a>
-    <p>Developed a full-stack restaurant app with user/admin roles, order tracking, notifications, and Google Maps integration using Firebase, Cloud Functions, Cloud Storage, and GCP services.</p>
-    <p><strong>Technologies:</strong> Java, Firebase Auth, Realtime DB, Cloud Storage, Cloud Messaging, Google Maps API, GCP</p>
-    <ul class="actions special">
-        <li><a href="https://play.google.com/store/apps/details?id=com.alokdev21.foodapk&hl=en_IN" class="button">View on Play Store</a></li>
-    </ul>
-</article>
+                <!-- Professional Projects -->
+                <header>
+                    <h2 style="margin-bottom: 30px; border-bottom: 2px solid #ccc; padding-bottom: 10px;">Professional Projects</h2>
+                </header>
 
-<!-- Pool2School -->
-<article>
-    <header>
-        <h2><a>Pool2School – School Ride Sharing</a></h2>
-    </header>
-    <a class="image fit"><img src="images/pool2school.jpg" alt="Pool2School App" class="project-image" /></a>
-    <p>App for parents to coordinate shared pickup/drop for kids studying in the same school using Firebase, Google Cloud, and location-based filtering. Built with Java and deployed via Play Console.</p>
-    <p><strong>Technologies:</strong> Java, Firebase Realtime DB, Firebase Auth, Google Cloud Platform</p>
-</article>
+                <article>
+                    <header><h2><a>Fire N Grill – Restaurant App</a></h2></header>
+                    <a class="image fit"><img src="images/firengrill.png" alt="Fire N Grill App" class="project-image" /></a>
+                    <p>Developed a full-stack restaurant app with user/admin roles, order tracking, notifications, and Google Maps integration using Firebase, Cloud Functions, Cloud Storage, and GCP services.</p>
+                    <p><strong>Technologies:</strong> Java, Firebase Auth, Realtime DB, Cloud Storage, Cloud Messaging, Google Maps API, GCP</p>
+                    <ul class="actions special">
+                        <li><a href="https://play.google.com/store/apps/details?id=com.alokdev21.foodapk&hl=en_IN" class="button">View on Play Store</a></li>
+                    </ul>
+                </article>
 
-<!-- Greenwave -->
-<article>
-    <header>
-        <h2><a>Greenwave – Environment Awareness</a></h2>
-    </header>
-    <a class="image fit"><img src="images/greenwave.png" alt="Greenwave App" class="project-image" /></a>
-    <p>App with environmental calculator, carbon emission tracker, and city-based environmental news. Built with WebViews, Firebase, and GCP, published on Play Store.</p>
-    <p><strong>Technologies:</strong> Android Studio, Java, WebView, Firebase, Google Cloud Platform</p>
-</article>
+                <article>
+                    <header><h2><a>Pool2School – School Ride Sharing</a></h2></header>
+                    <a class="image fit"><img src="images/pool2school.jpg" alt="Pool2School App" class="project-image" /></a>
+                    <p>App for parents to coordinate shared pickup/drop for kids studying in the same school using Firebase, Google Cloud, and location-based filtering. Built with Java and deployed via Play Console.</p>
+                    <p><strong>Technologies:</strong> Java, Firebase Realtime DB, Firebase Auth, Google Cloud Platform</p>
+                </article>
 
-<!-- Car Price Prediction -->
-<article>
-    <header>
-        <h2><a>Car Price Prediction (MachineHack)</a></h2>
-    </header>
-    <a class="image fit"><img src="images/creditcard.png" alt="Car Price Prediction" class="project-image" /></a>
-    <p>ML project to predict car prices using a 17-attribute dataset. Achieved top 300 rank in MachineHack hackathon with log MSE of 0.8.</p>
-    <p><strong>Technologies:</strong> Python, Pandas, Scikit-learn, Machine Learning</p>
-    <ul class="actions special">
-        <li><a href="https://github.com/aloksharma-1/Credit-card-fraud-detection-Full-project" class="button">GitHub Link</a></li>
-    </ul>
-</article>
+                <article>
+                    <header><h2><a>Greenwave – Environment Awareness</a></h2></header>
+                    <a class="image fit"><img src="images/greenwave.png" alt="Greenwave App" class="project-image" /></a>
+                    <p>App with environmental calculator, carbon emission tracker, and city-based environmental news. Built with WebViews, Firebase, and GCP, published on Play Store.</p>
+                    <p><strong>Technologies:</strong> Android Studio, Java, WebView, Firebase, Google Cloud Platform</p>
+                </article>
 
-<!-- Handwritten Digit Recognition -->
-<article>
-    <header>
-        <h2><a>Handwritten Digit Recognition using Keras</a></h2>
-    </header>
-    <a class="image fit"><img src="images/handwritten.png" alt="Digit Recognition" class="project-image" /></a>
-    <p>Deep learning model trained on MNIST dataset (70k images) using Keras to classify handwritten digits with high accuracy.</p>
-    <p><strong>Technologies:</strong> Python, TensorFlow, Keras, MNIST Dataset</p>
-    <ul class="actions special">
-        <li><a href="https://github.com/aloksharma-1/TubeDownloader" class="button">GitHub Link</a></li>
-    </ul>
-</article>
-<!-- Tube Downloader -->
-<article>
-    <header>
-        <h2><a>Tube Downloader – YouTube Video Downloader</a></h2>
-    </header>
-    <a class="image fit"><img src="images/icon.ico" alt="Tube Downloader" class="project-image" /></a>
-    <p>Created a Python-based YouTube downloader that fetches videos using URL input. Supports various video qualities and formats with user-friendly CLI interface.</p>
-    <p><strong>Technologies:</strong> Python, Pytube, Tkinter (for optional GUI), CLI</p>
-    <ul class="actions special">
-        <li><a href="https://github.com/aloksharma-1/TubeDownloader" class="button">GitHub Link</a></li>
-    </ul>
-</article>
+                <!-- Personal Projects -->
+                <header style="margin-top: 60px;">
+                    <h2 style="margin-bottom: 30px; border-bottom: 2px solid #ccc; padding-bottom: 10px;">Personal Projects</h2>
+                </header>
 
-<!-- Loan Recovery Prediction -->
-<article>
-    <header>
-        <h2><a>Loan Recovery Prediction – ML Model</a></h2>
-    </header>
-    <a class="image fit"><img src="images/loanrecovery.png" alt="Loan Recovery Prediction" class="project-image" /></a>
-    <p>Developed a machine learning model to predict the chances of loan recovery using customer and transaction data. Used data preprocessing, feature selection, and model evaluation for accurate predictions.</p>
-    <p><strong>Technologies:</strong> Python, Pandas, Scikit-learn, Logistic Regression, XGBoost</p>
-    <ul class="actions special">
-        <li><a href="https://github.com/aloksharma-1" class="button">GitHub Link</a></li> <!-- Update with actual repo link if different -->
-    </ul>
-</article>
+                <article>
+                    <header><h2><a>Car Price Prediction (MachineHack)</a></h2></header>
+                    <a class="image fit"><img src="images/creditcard.png" alt="Car Price Prediction" class="project-image" /></a>
+                    <p>ML project to predict car prices using a 17-attribute dataset. Achieved top 300 rank in MachineHack hackathon with log MSE of 0.8.</p>
+                    <p><strong>Technologies:</strong> Python, Pandas, Scikit-learn, Machine Learning</p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/aloksharma-1/Credit-card-fraud-detection-Full-project" class="button">GitHub Link</a></li>
+                    </ul>
+                </article>
 
+                <article>
+                    <header><h2><a>Handwritten Digit Recognition using Keras</a></h2></header>
+                    <a class="image fit"><img src="images/handwritten.png" alt="Digit Recognition" class="project-image" /></a>
+                    <p>Deep learning model trained on MNIST dataset (70k images) using Keras to classify handwritten digits with high accuracy.</p>
+                    <p><strong>Technologies:</strong> Python, TensorFlow, Keras, MNIST Dataset</p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/aloksharma-1/TubeDownloader" class="button">GitHub Link</a></li>
+                    </ul>
+                </article>
+
+                <article>
+                    <header><h2><a>Tube Downloader – YouTube Video Downloader</a></h2></header>
+                    <a class="image fit"><img src="images/icon.ico" alt="Tube Downloader" class="project-image" /></a>
+                    <p>Created a Python-based YouTube downloader that fetches videos using URL input. Supports various video qualities and formats with user-friendly CLI interface.</p>
+                    <p><strong>Technologies:</strong> Python, Pytube, Tkinter (for optional GUI), CLI</p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/aloksharma-1/TubeDownloader" class="button">GitHub Link</a></li>
+                    </ul>
+                </article>
+
+                <article>
+                    <header><h2><a>Loan Recovery Prediction – ML Model</a></h2></header>
+                    <a class="image fit"><img src="images/loanrecovery.png" alt="Loan Recovery Prediction" class="project-image" /></a>
+                    <p>Developed a machine learning model to predict the chances of loan recovery using customer and transaction data. Used data preprocessing, feature selection, and model evaluation for accurate predictions.</p>
+                    <p><strong>Technologies:</strong> Python, Pandas, Scikit-learn, Logistic Regression, XGBoost</p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/aloksharma-1" class="button">GitHub Link</a></li>
+                    </ul>
+                </article>
 
             </section>
         </div>
@@ -207,11 +185,9 @@
             </section>
         </footer>
 
-        <!-- Copyright -->
         <div id="copyright">
             <ul>© Alok Sharma</ul>
         </div>
-
     </div>
 
     <!-- Scripts -->
