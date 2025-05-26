@@ -116,7 +116,24 @@
                 <li class="active"><a href="projects.html">Technical Projects</a></li>
                 <li><a href="experience.html">Professional Experience</a></li>
                 <li><a href="papers.html">Research Publications</a></li>                
-
+<div style="margin-left: 20px; display: inline-block; vertical-align: middle;">
+        <select id="filter-select" onchange="filterProjects(this.value)" style="
+            padding: 8px 16px;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: 2px solid #eaeaea;
+            background-color: #f8f9fa;
+            color: #333;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        ">
+            <option value="all">All Projects</option>
+            <option value="professional">Professional</option>
+            <option value="personal">Personal</option>
+            <option value="ml">ML</option>
+            <option value="cloud">Cloud</option>
+        </select>
+    </div>
             </ul>
             <ul class="icons">
                 <li><a href="https://twitter.com/Alok2910472" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -132,25 +149,6 @@
             <section class="posts">
 
           <!-- Inside your <section class="posts"> section -->
-<!-- Project Filter Buttons -->
-<div id="project-filters" style="text-align: center; margin: 40px 0;">
-  <select id="filter-select" onchange="filterProjects(this.value)" style="
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: 2px solid #eaeaea;
-    background-color: #f8f9fa;
-    color: #333;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  ">
-    <option value="all">All Projects</option>
-    <option value="professional">Professional</option>
-    <option value="personal">Personal</option>
-    <option value="ml">ML</option>
-    <option value="cloud">Cloud</option>
-  </select>
-</div>
 
 
 <!-- Fire N Grill -->
