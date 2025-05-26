@@ -123,7 +123,7 @@
 </div>
 
 <!-- Fire N Grill -->
-<article>
+<article class="project professional cloud">
     <header>
         <h2><a>[Professional] Fire N Grill – Restaurant App</a></h2>
     </header>
@@ -136,7 +136,7 @@
 </article>
 
 <!-- Pool2School -->
-<article>
+<article class="project professional cloud">
     <header>
         <h2><a>[Professional] Pool2School – School Ride Sharing</a></h2>
     </header>
@@ -146,7 +146,7 @@
 </article>
 
 <!-- Greenwave -->
-<article>
+<article class="project professional cloud" >
     <header>
         <h2><a>[Professional] Greenwave – Environment Awareness</a></h2>
     </header>
@@ -156,7 +156,7 @@
 </article>
 
 <!-- Credit Card Fraud Detection -->
-<article>
+<article class="project personal ml">
     <header>
         <h2><a>[Personal] Credit Card Fraud Detection</a></h2>
     </header>
@@ -169,7 +169,7 @@
 </article>
 
 <!-- DevOps Task Manager – Microservices on GCP -->
-<article>
+<article class="project personal cloud">
     <header>
         <h2>
             <a href="https://github.com/aloksharma-1/devops-python-microservices" target="_blank" rel="noopener noreferrer">
@@ -196,7 +196,7 @@
 </article>
 
 <!-- Email Marketing Campaign System -->
-<article>
+<article class="project personal cloud">
     <header>
         <h2>
             <a href="https://github.com/aloksharma-1/email-campaign-system" target="_blank" rel="noopener noreferrer">
@@ -220,7 +220,7 @@
     </ul>
 </article>
 <!-- URL Shortener with GCP -->
-<article>
+<article class="project personal cloud">
     <header>
         <h2>
             <a href="https://github.com/aloksharma-1/url-shortener" target="_blank">
@@ -247,7 +247,7 @@
 </article>
 
 <!-- Handwritten Digit Recognition -->
-<article>
+<article class="project personal ml">
     <header>
         <h2><a>[Personal] Digit Recognition using Keras</a></h2>
     </header>
@@ -260,7 +260,7 @@
 </article>
 
 <!-- Tube Downloader -->
-<article>
+<article class="project personal ml">
     <header>
         <h2><a>[Personal] Tube Downloader – YouTube Video Downloader</a></h2>
     </header>
@@ -273,7 +273,7 @@
 </article>
 
 <!-- Loan Recovery Prediction -->
-<article>
+<article class="project personal ml">
     <header>
         <h2><a>[Personal] Loan Recovery Prediction – ML Model</a></h2>
     </header>
@@ -304,6 +304,16 @@
         </div>
 
     </div>
+<script>
+    function filterProjects(category) {
+        const articles = document.querySelectorAll('.posts article');
+
+        articles.forEach(article => {
+            const matches = category === 'all' || article.classList.contains(category);
+            article.style.display = matches ? 'block' : 'none';
+        });
+    }
+</script>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
