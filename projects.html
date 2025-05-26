@@ -117,23 +117,27 @@
                 <li><a href="experience.html">Professional Experience</a></li>
                 <li><a href="papers.html">Research Publications</a></li>                
 <div style="margin-left: 20px; display: inline-block; vertical-align: middle;">
-        <select id="filter-select" onchange="filterProjects(this.value)" style="
-            padding: 8px 16px;
-            font-size: 1rem;
-            border-radius: 6px;
-            border: 2px solid #eaeaea;
-            background-color: #f8f9fa;
-            color: #333;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        ">
-            <option value="all">All Projects</option>
-            <option value="professional">Professional</option>
-            <option value="personal">Personal</option>
-            <option value="ml">ML</option>
-            <option value="cloud">Cloud</option>
-        </select>
-    </div>
+    <select id="filter-select" onchange="filterProjects(this.value)" style="
+        padding: 8px 16px;
+        font-size: 1rem;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        background-color: rgba(255, 255, 255, 0.95); /* Slightly opaque white */
+        color: #333;
+        cursor: pointer;
+        box-shadow: none; /* Remove shadow */
+        transition: background-color 0.3s ease;
+        height: 36px; /* Match nav height for better alignment */
+        font-weight: 600;
+    " onmouseover="this.style.backgroundColor='#fff'" onmouseout="this.style.backgroundColor='rgba(255, 255, 255, 0.95)'">
+        <option value="all">All Projects</option>
+        <option value="professional">Professional</option>
+        <option value="personal">Personal</option>
+        <option value="ml">ML</option>
+        <option value="cloud">Cloud</option>
+    </select>
+</div>
+
             </ul>
             <ul class="icons">
                 <li><a href="https://twitter.com/Alok2910472" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
