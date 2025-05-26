@@ -111,36 +111,77 @@
 
         <!-- Nav -->
         <nav id="nav">
-            <ul class="links">
-                <li><a href="index.html">Profile</a></li>
-                <li class="active"><a href="projects.html">Technical Projects</a></li>
-                <li><a href="experience.html">Professional Experience</a></li>
-                <li><a href="papers.html">Research Publications</a></li>                
-<div style="margin-left: 20px; display: inline-block; vertical-align: middle;">
-        <select id="filter-select" onchange="filterProjects(this.value)" style="
-            padding: 8px 16px;
-            font-size: 1rem;
-            border-radius: 6px;
-            border: 2px solid #eaeaea;
-            background-color: #f8f9fa;
-            color: #333;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        ">
-            <option value="all">All Projects</option>
-            <option value="professional">Professional</option>
-            <option value="personal">Personal</option>
-            <option value="ml">ML</option>
-            <option value="cloud">Cloud</option>
-        </select>
-    </div>
-            </ul>
-            <ul class="icons">
-                <li><a href="https://twitter.com/Alok2910472" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                <li><a href="https://github.com/aloksharma-1" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                <li><a href="https://www.instagram.com/heartless_mr_alok/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-            </ul>
-        </nav>
+  <ul class="links">
+    <li><a href="index.html">Profile</a></li>
+    <li class="active"><a href="projects.html">Technical Projects</a></li>
+    <li><a href="experience.html">Professional Experience</a></li>
+    <li><a href="papers.html">Research Publications</a></li>                
+  </ul>
+  <ul class="icons">
+    <li><a href="https://twitter.com/Alok2910472" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+    <li><a href="https://github.com/aloksharma-1" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+    <li><a href="https://www.instagram.com/heartless_mr_alok/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+    <li style="position: relative;">
+      <!-- Filter icon -->
+      <span id="filter-icon" style="cursor:pointer; font-size: 20px; user-select:none;" title="Filter Projects">&#128269;</span>
+      
+      <!-- Dropdown filter (initially hidden) -->
+      <select id="filter-select" onchange="filterProjects(this.value)" style="
+        position: absolute;
+        top: 30px;
+        right: 0;
+        padding: 8px 12px;
+        font-size: 1rem;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        background-color: rgba(255, 255, 255, 0.95);
+        color: #333;
+        cursor: pointer;
+        display: none;
+        font-weight: 600;
+        min-width: 140px;
+        z-index: 1000;
+      ">
+        <option value="all">All Projects</option>
+        <option value="professional">Professional</option>
+        <option value="personal">Personal</option>
+        <option value="ml">ML</option>
+        <option value="cloud">Cloud</option>
+      </select>
+    </li>
+  </ul>
+</nav>
+
+<script>
+  const filterIcon = document.getElementById('filter-icon');
+  const filterSelect = document.getElementById('filter-select');
+
+  filterIcon.addEventListener('click', () => {
+    // Toggle dropdown visibility
+    if (filterSelect.style.display === 'block') {
+      filterSelect.style.display = 'none';
+    } else {
+      filterSelect.style.display = 'block';
+      filterSelect.focus();
+    }
+  });
+
+  // Optional: Hide dropdown if clicked outside
+  document.addEventListener('click', (e) => {
+    if (!filterIcon.contains(e.target) && !filterSelect.contains(e.target)) {
+      filterSelect.style.display = 'none';
+    }
+  });
+
+  function filterProjects(category) {
+    const articles = document.querySelectorAll('.posts article');
+
+    articles.forEach(article => {
+      const matches = category === 'all' || article.classList.contains(category);
+      article.style.display = matches ? 'block' : 'none';
+    });
+  }
+</script>
 
         <!-- Main -->
         <div id="main">
@@ -333,16 +374,6 @@
         </div>
 
     </div>
-<script>
-    function filterProjects(category) {
-        const articles = document.querySelectorAll('.posts article');
-
-        articles.forEach(article => {
-            const matches = category === 'all' || article.classList.contains(category);
-            article.style.display = matches ? 'block' : 'none';
-        });
-    }
-</script>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
