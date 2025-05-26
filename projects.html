@@ -134,12 +134,24 @@
           <!-- Inside your <section class="posts"> section -->
 <!-- Project Filter Buttons -->
 <div id="project-filters" style="text-align: center; margin: 40px 0;">
-    <button class="filter-button" onclick="filterProjects('all')">All</button>
-    <button class="filter-button" onclick="filterProjects('professional')">Professional</button>
-    <button class="filter-button" onclick="filterProjects('personal')">Personal</button>
-    <button class="filter-button" onclick="filterProjects('ml')">ML</button>
-    <button class="filter-button" onclick="filterProjects('cloud')">Cloud</button>
+  <select id="filter-select" onchange="filterProjects(this.value)" style="
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 2px solid #eaeaea;
+    background-color: #f8f9fa;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  ">
+    <option value="all">All Projects</option>
+    <option value="professional">Professional</option>
+    <option value="personal">Personal</option>
+    <option value="ml">ML</option>
+    <option value="cloud">Cloud</option>
+  </select>
 </div>
+
 
 <!-- Fire N Grill -->
 <article class="project professional cloud">
