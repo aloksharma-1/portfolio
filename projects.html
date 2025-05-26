@@ -109,7 +109,8 @@
             <a href="index.html" class="logo">Projects</a>
         </header>
 
-     <nav id="nav">
+        <!-- Nav -->
+        <nav id="nav">
   <ul class="links">
     <li><a href="index.html">Profile</a></li>
     <li class="active"><a href="projects.html">Technical Projects</a></li>
@@ -124,55 +125,60 @@
       <!-- Filter icon -->
       <img id="filter-icon" src="images/filter.png" alt="Filter" style="cursor:pointer; width:20px; height:20px; user-select:none;" title="Filter Projects" />
 
-      <!-- Filter list (hidden initially) -->
-      <ul id="filter-list" style="
-        display: none;
+      <!-- Dropdown filter (initially hidden) -->
+      <select id="filter-select" onchange="filterProjects(this.value)" style="
         position: absolute;
         top: 30px;
         right: 0;
-        background: #fff;
-        border: 1px solid #ccc;
+        padding: 8px 12px;
+        font-size: 1rem;
         border-radius: 6px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        padding: 10px 15px;
-        list-style: none;
-        min-width: 140px;
+        border: 1px solid #ccc;
+        background-color: rgba(255, 255, 255, 0.95);
+        color: #333;
+        cursor: pointer;
+        display: none;
         font-weight: 600;
+        min-width: 140px;
         z-index: 1000;
       ">
-        <li style="padding: 6px 0; cursor: pointer;" onclick="filterProjects('all'); toggleFilterList()">All Projects</li>
-        <li style="padding: 6px 0; cursor: pointer;" onclick="filterProjects('professional'); toggleFilterList()">Professional</li>
-        <li style="padding: 6px 0; cursor: pointer;" onclick="filterProjects('personal'); toggleFilterList()">Personal</li>
-        <li style="padding: 6px 0; cursor: pointer;" onclick="filterProjects('ml'); toggleFilterList()">ML</li>
-        <li style="padding: 6px 0; cursor: pointer;" onclick="filterProjects('cloud'); toggleFilterList()">Cloud</li>
-      </ul>
+        <option value="all">All Projects</option>
+        <option value="professional">Professional</option>
+        <option value="personal">Personal</option>
+        <option value="ml">ML</option>
+        <option value="cloud">Cloud</option>
+      </select>
     </li>
   </ul>
 </nav>
 
 <script>
   const filterIcon = document.getElementById('filter-icon');
-  const filterList = document.getElementById('filter-list');
+  const filterSelect = document.getElementById('filter-select');
 
-  // Toggle filter list visibility
-  function toggleFilterList() {
-    filterList.style.display = (filterList.style.display === 'block') ? 'none' : 'block';
-  }
-
-  filterIcon.addEventListener('click', (e) => {
-    e.stopPropagation(); // prevent event bubbling so document listener doesn't immediately hide
-    toggleFilterList();
+  filterIcon.addEventListener('click', () => {
+    // Toggle dropdown visibility
+    if (filterSelect.style.display === 'block') {
+      filterSelect.style.display = 'none';
+    } else {
+      filterSelect.style.display = 'block';
+      filterSelect.focus();
+    }
   });
 
-  // Hide filter list on click outside
-  document.addEventListener('click', () => {
-    filterList.style.display = 'none';
+  // Optional: Hide dropdown if clicked outside
+  document.addEventListener('click', (e) => {
+    if (!filterIcon.contains(e.target) && !filterSelect.contains(e.target)) {
+      filterSelect.style.display = 'none';
+    }
   });
 
   function filterProjects(category) {
     const articles = document.querySelectorAll('.posts article');
+
     articles.forEach(article => {
-      article.style.display = (category === 'all' || article.classList.contains(category)) ? 'block' : 'none';
+      const matches = category === 'all' || article.classList.contains(category);
+      article.style.display = matches ? 'block' : 'none';
     });
   }
 </script>
