@@ -113,7 +113,15 @@
             <section class="posts">
 
           <!-- Inside your <section class="posts"> section -->
-<!-- Fire N Grill -->
+<!-- Project Filter Buttons -->
+<div id="project-filters" style="text-align: center; margin: 40px 0;">
+    <button class="filter-button" onclick="filterProjects('all')">All</button>
+    <button class="filter-button" onclick="filterProjects('professional')">Professional</button>
+    <button class="filter-button" onclick="filterProjects('personal')">Personal</button>
+    <button class="filter-button" onclick="filterProjects('ml')">ML</button>
+    <button class="filter-button" onclick="filterProjects('cloud')">Cloud</button>
+</div>
+
 <!-- Fire N Grill -->
 <article>
     <header>
@@ -164,7 +172,7 @@
 <article>
     <header>
         <h2>
-            <a href="https://github.com/aloksharma-1/task-manager-devops" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/aloksharma-1/devops-python-microservices" target="_blank" rel="noopener noreferrer">
                 [Personal] DevOps Task Manager – Microservices on Google Cloud Platform
             </a>
         </h2>
@@ -206,6 +214,32 @@
     <ul class="actions special">
         <li>
             <a href="https://github.com/aloksharma-1/email-campaign-system" class="button" target="_blank" rel="noopener noreferrer">
+                View GitHub Repository
+            </a>
+        </li>
+    </ul>
+</article>
+<!-- URL Shortener with GCP -->
+<article>
+    <header>
+        <h2>
+            <a href="https://github.com/aloksharma-1/url-shortener" target="_blank">
+                [Personal] URL Shortener – FastAPI + GKE + Cloud Build
+            </a>
+        </h2>
+    </header>
+    <a class="image fit">
+        <img src="images/url-shortener.png" alt="URL Shortener Project" class="project-image" />
+    </a>
+    <p>
+        A scalable, cloud-native URL shortener REST API developed using FastAPI and deployed on Google Cloud Platform. Features include containerization with Docker, CI/CD automation with Cloud Build, artifact management via Artifact Registry, and Kubernetes deployment through GKE with a public LoadBalancer.
+    </p>
+    <p>
+        <strong>Technologies:</strong> Python, FastAPI, Docker, Cloud Build, Kubernetes (GKE), Artifact Registry, YAML, Google Cloud Platform
+    </p>
+    <ul class="actions special">
+        <li>
+            <a href="https://github.com/aloksharma-1/url-shortener" class="button" target="_blank">
                 View GitHub Repository
             </a>
         </li>
